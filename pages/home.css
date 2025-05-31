@@ -1,0 +1,335 @@
+.section__heading {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.section__type-list {
+    width: 100%;
+    background: #fff;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.section__type-item {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* - width: 30px;: Đặt chiều rộng của hình ảnh là 30px.
+- transition: transform 0.3s ease;: Khi có thay đổi về thuộc tính transform, hình ảnh sẽ chuyển động mượt trong 0.3 giây với hiệu ứng ease (chậm đầu, nhanh giữa, chậm cuối).
+  */
+.section__type-item img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* - translateY(10px): Di chuyển xuống dưới 10px.
+- scale(1.5): Phóng to hình ảnh lên 1.5 lần.
+  */
+.section__type-item:hover>img {
+    transform: translateY(10px) scale(1.5);
+}
+/* ẩn phẩn tử p đi  */
+.section__type-item:hover>p {
+    visibility: hidden;
+}
+
+.section__product-list {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section__product-card {
+    width: 18%;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__product-img {
+    width: 80%;
+}
+
+.section__product-img img {
+    width: 100%;
+}
+
+.section__product-name {
+    margin: 10px 0;
+    min-height: 50px;
+    text-align: center;
+}
+
+.section__product-price {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.section__view-detail,
+.section__add-to-cart {
+    width: 100%;
+    background: #eee;
+    padding: 8px;
+    border-radius: 10px;
+    color: #666;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.section__view-detail:hover,
+.section__add-to-cart:hover {
+    cursor: pointer;
+    background: #ccc;
+}
+
+.section__product-detail,
+.section__add-to-cart {
+    display: none;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.section__product-card.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    z-index: 2;
+    width: 20%;
+    padding: 20px;
+    animation: hehe 0.3s linear;
+}
+@keyframes hehe
+{
+    form{
+        transform: translate(-50%,-45%);
+    }
+    to 
+    {
+        transform: translate(-50%,-50%);
+    }
+}
+
+.section__product-card.active .section__view-detail {
+    display: none;
+}
+
+.section__product-card.active .section__product-detail,
+.section__product-card.active .section__add-to-cart {
+    display: block;
+}
+
+.section__product-card.active .section__product-name,
+.section__product-card.active .section__product-price {
+    margin: 0;
+    min-height: unset;
+    align-self: start;
+    font-weight: 600;
+}
+
+.section__product-card.active .section__product-img {
+    width: 100%;
+}
+
+/* hiệu ứng đổ bóng  */
+.section__product-card.active .section__product-img img {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+.section__product-card.active .section__product-detail {
+    align-self: start;
+    margin: 10px 0;
+}
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: orange;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    z-index: 10;
+    display: inline;
+}
+
+#btn-signup
+{
+    cursor: pointer;
+
+}
+
+#btn-login
+{
+cursor: pointer;
+}
+#btn-signup:hover,
+#btn-login:hover
+{
+    background: #ccc;
+}
+
+
+/* Chatbot */
+#chatbot-widget {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#chatbot-header {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#chatbot-body {
+    box-shadow: 0 4px 24px rgba(44,83,100,0.18);
+}
+#chatbot-input:focus {
+    outline: none;
+}
+.comments-section {
+    background: linear-gradient(90deg, #141E30, #203A43, #2C5364);
+    color: #fff;
+    padding: 40px 0 30px 0;
+    margin: 40px auto 0 auto;
+    border-radius: 16px;
+    width: 70%;
+    box-shadow: 0 4px 24px rgba(44,83,100,0.10);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.comments-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.comment-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+.comment-form input {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+    min-width: 160px;
+    background: #fff;
+    color: #203A43;
+}
+.comment-form button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: orange;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.comment-form button#comment-cancel {
+    background: #ccc;
+    color: #203A43;
+}
+.comment-form button:hover {
+    background: #ffd700;
+    color: #203A43;
+}
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.comment-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 18px 22px;
+    min-width: 260px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.08);
+    position: relative;
+    text-align: left;
+}
+.comment-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #ffd700;
+    background: #203A43;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.18);
+}
+.comment-content {
+    flex: 1;
+}
+.comment-name {
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 2px;
+}
+.comment-text {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 4px;
+}
+.comment-actions {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+}
+.comment-actions button {
+    background: #ffd700;
+    color: #203A43;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.comment-actions button:hover {
+    background: orange;
+    color: #fff;
+}

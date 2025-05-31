@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="mains.js" defer></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Trang chủ </title>
+</head>
+<body>
+     <div id="overlay"></div>
+     <!-- Phần đầu trang  --><!-- Form Đăng ký -->
+<div id="signup-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:1000;align-items:center;justify-content:center;">
+  <form id="signup-form" style="background:#fff;padding:30px;border-radius:10px;min-width:300px;max-width:90vw;margin:auto;">
+    <h3>Đăng ký tài khoản</h3>
+    <input type="text" id="signup-username" placeholder="Tên đăng nhập" required style="width:100%;margin-bottom:10px;padding:8px;">
+    <input type="password" id="signup-password" placeholder="Mật khẩu" required style="width:100%;margin-bottom:10px;padding:8px;">
+    <button type="submit" style="width:100%;">Đăng ký</button>
+    <div id="signup-msg" style="color:red;margin-top:10px;"></div>
+  </form>
+</div>
+<!-- Form Đăng nhập -->
+<div id="login-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:1000;align-items:center;justify-content:center;">
+  <form id="login-form" style="background:#fff;padding:30px;border-radius:10px;min-width:300px;max-width:90vw;margin:auto;">
+    <h3>Đăng nhập</h3>
+    <input type="text" id="login-username" placeholder="Tên đăng nhập" required style="width:100%;margin-bottom:10px;padding:8px;">
+    <input type="password" id="login-password" placeholder="Mật khẩu" required style="width:100%;margin-bottom:10px;padding:8px;">
+    <button type="submit" style="width:100%;">Đăng nhập</button>
+    <div id="login-msg" style="color:red;margin-top:10px;"></div>
+  </form>
+</div>
+    <header>
+        <h2>VANTHANGSTORE</h2>
+
+        
+        <img src="/images/logopanel.jpg" alt="" style="width: 50px;height: 40px;border-radius: 50%;margin-left: -50px;">
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Tìm kiếm...">
+        </div>
+        <nav>
+            <a href="http://127.0.0.1:5501/pages/home.html" class="active">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="http://127.0.0.1:5501/pages/cart.html"  style="color: orange;">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+              </a>
+    <button id="btn-signup" style="margin-left:20px;">Đăng ký</button>
+    <button id="btn-login">Đăng nhập</button>
+    <span id="user-info" style="margin-left:10px;color:yellow;"></span>
+    <button id="btn-logout" style="display:none;margin-left:10px;">Đăng xuất</button>
+        </nav>
+    </header>
+
+       <!-- Phần slide -->
+    <div class="panel-slide">
+        <div class="conterner conterner-center ">
+        <div class="row ">
+            <div class="column-9">
+                <div class="swiper">
+          
+                <div class="swiper-wrapper">
+                 
+                  <div class="swiper-slide">
+                    <div class="relative">
+                   <span class="cover  "><img src="/images/anhmt1.png " alt=""></span>
+                  
+                    </div>
+                  </div>
+                  <div class="swiper-slide"> 
+                    <span class="cover "> <img src="/images/anhmt4.jpg" alt=""></div></span> 
+               
+                  <div class="swiper-slide">
+                    <span class="cover "><img src="/images/anhmt5.jpg" alt=""></span> 
+                      
+                </div>
+               
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>           
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>   
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+            <div class="column-3">
+                <div class="top-seling-product">
+                    <div class="panel-head">
+                        <h3><span>CÁC SẢN PHẨM CHÍNH </span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="product-item1">
+                            <a href="" class="img"><img src="/images/maytinh3.jpg" alt=""></a>
+                        
+                        <div class="info">
+                            <h4><a href="" title="">HP100</a></h4>
+                            <div class="sp"><span>color:red</span>--<span>size:32</span></div>
+                            <div class="sd"><span>Giá:3.000.000đ</span></div>
+                        </div>
+                        </div>
+                        <div class="product-item1">
+                            <a href="" class="img"><img src="/images/maytinh1.jpg" alt=""></a>
+                        
+                        <div class="info">
+                            <h4><a href="" title="">HP100</a></h4>
+                            <div class="sp"><span>color:red</span>--<span>size:32</span></div>
+                            <div class="sd"><span>Giá:3.000.000đ</span></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="product-item1">
+                        <a href="" class="img"><img src="/images/maytinh2.jpg" alt=""></a>
+                    
+                    <div class="info">  
+                        <h4><a href="" title="">HP100</a></h4>
+                        <div class="sp"><span>color:red</span>--<span>size:32</span></div>
+                        <div class="sd"><span>Giá:3.000.000đ</span></div>
+                    </div>
+                </div>
+                    
+                </div>
+
+                
+              </div>
+        </div>
+       
+
+        </div>
+        </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+ 
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
+
+
+
+          <!-- Phần hiển thị sản phẩm  -->
+    <main>
+        <div class="section">
+            <div class="section__heading">Loại sản phẩm</div>
+            <div class="section__type-list">
+                <div class="section__type-item" type="all">
+                    <img src="/images/all-types.png" alt="">
+                    <p>Tất cả</p>
+                </div>
+                <div class="section__type-item" type="phone">
+                    <img src="/images/phone-type.png" alt="">
+                    <p>Điện thoại</p>
+                </div>
+                <div class="section__type-item" type="laptop">
+                    <img src="/images/laptop-png.png" alt="">
+                    <p>Laptop</p>
+                </div>
+                <div class="section__type-item" type="watch">
+                    <img src="/images/watch-type.png" alt="">
+                    <p>Đồng hồ</p>
+                </div>
+                <div class="section__type-item" type="accessory">
+                    <img src="/images/accessory-type.png" alt="">
+                    <p>Phụ kiện</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__heading">Sản phẩm nổi bật</div>
+            <div class="section__product-list">
+                <div class="section__product-card" type="phone">
+                    <div class="section__product-img">
+                        <img src="/images/popular-1.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        iPhone 16 128GB
+                    </div>
+                    <div class="section__product-price">
+                        22.990.000đ
+                    </div>
+                    <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Apple A18 6 nhân <br>
+                        <strong>GPU:</strong> Apple GPU 5 nhân <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div>  
+                </div>
+                <div class="section__product-card" type="laptop">
+                    <div class="section__product-img">
+                        <img src="/images/popular-2.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        Macbook Pro 16 Inch
+                    </div>
+                    <div class="section__product-price">
+                        89.990.000đ
+                    </div>
+                <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> GS 18 <br>
+                        <strong>CPU:</strong> Mackbook A18 6 nhân <br>
+                        <strong>GPU:</strong> Mackbook GPU 5 nhân <br>
+                        <strong>RAM:</strong> 16GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 256 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="watch">
+                    <div class="section__product-img">
+                        <img src="/images/popular-3.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        Apple Watch Series 10
+                    </div>
+                    <div class="section__product-price">
+                        14.390.000đ
+                    </div>
+                   <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Apple A18 6 nhân <br>
+                        <strong>GPU:</strong> Apple GPU 5 nhân <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="accessory">
+                    <div class="section__product-img">
+                        <img src="/images/popular-4.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        AirPods Pro 2
+                    </div>
+                    <div class="section__product-price">
+                        6.199.000đ
+                    </div>
+                  <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Airpods A18 6 nhân <br>
+                        <strong>GPU:</strong> Airpods GPU 5 nhân <br>
+                        <strong>RAM:</strong> 4GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 64 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="accessory">
+                    <div class="section__product-img">
+                        <img src="/images/popular-5.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        Apple Pencil (USB-C)
+                    </div>
+                    <div class="section__product-price">
+                        2.990.000đ
+                    </div>
+                     <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Apple A18 6 nhân <br>
+                        <strong>GPU:</strong> Apple GPU 5 nhân <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="laptop">
+                    <div class="section__product-img">
+                        <img src="/images/popular-6.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        Macbook Air M3 13 Inch
+                    </div>
+                    <div class="section__product-price">
+                        29.990.000đ
+                    </div>
+                    <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> GS 18 <br>
+                        <strong>CPU:</strong> Mackbook A18 6 nhân <br>
+                        <strong>GPU:</strong> Mackbook GPU 5 nhân <br>
+                        <strong>RAM:</strong> 16GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 256 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="phone">
+                    <div class="section__product-img">
+                        <img src="/images/popular-7.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        iPhone 15 Pro Max 256GB
+                    </div>
+                    <div class="section__product-price">
+                        33.990.000đ
+                    </div>
+                    <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Apple A18 6 nhân <br>
+                        <strong>GPU:</strong> Apple GPU 5 nhân <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="watch">
+                    <div class="section__product-img">
+                        <img src="/images/popular-8.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        Apple Watch SE 2
+                    </div>
+                    <div class="section__product-price">
+                        6.490.000đ
+                    </div>
+                     <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Apple A18 6 nhân <br>
+                        <strong>GPU:</strong> Apple GPU 5 nhân <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="phone">
+                    <div class="section__product-img">
+                        <img src="/images/popular-9.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        iPhone SE 2025
+                    </div>
+                    <div class="section__product-price">
+                        11.990.000đ
+                    </div>
+                     <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Iphone A18 6 nhân <br>
+                        <strong>GPU:</strong> Iphone GPU 5 nhân <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+                <div class="section__product-card" type="accessory">
+                    <div class="section__product-img">
+                        <img src="/images/popular-10.png" alt="">
+                    </div>
+                    <div class="section__product-name">
+                        Sạc nhanh Apple 35W
+                    </div>
+                    <div class="section__product-price">
+                        1.790.000đ
+                    </div>
+                      <div class="section__product-detail">
+                        <strong>Hệ điều hành:</strong> iOS 18 <br>
+                        <strong>CPU:</strong> Sạc nhanh gọn tiện lợi<br>
+                        <strong>GPU:</strong> Pin trâu  <br>
+                        <strong>RAM:</strong> 8GB <br>
+                        <strong>Dung lượng lưu trữ:</strong> 128 GB <br>
+                    </div>
+                    <div class="section__view-detail">
+                        Xem chi tiết
+                    </div>
+                    <div class="section__add-to-cart">
+                        Thêm vào giỏ hàng
+                    </div> 
+                </div>
+            </div> 
+        </div>
+    </main>
+     <div class="panel-body" style="margin-top: 30px;" >
+
+        <h2 class="heading1" style="margin-bottom: 20px;">SẢN PHẨM TƯƠNG TỰ  </h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          
+                                <div class="product-item">
+                                    <div class="percent">10%</div>
+                                    <div class="phong"><img src="/images/maytinh1.jpg" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">30.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-item">
+                                    <div class="percent">20%</div>
+                                    <div class="phong"><img src="/images/maytinh2.jpg" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">30.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-item">
+                                    <div class="percent">10%</div>
+                                    <div class="phong"><img src="/images/popular-6.png" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">30.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-item">
+                                    <div class="percent">30%</div>
+                                    <div class="phong"><img src="/images/maytinh3.jpg" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">50.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-item">
+                                    <div class="percent">15%</div>
+                                    <div class="phong"><img src="/images/popular-6.png" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">15.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-item">
+                                    <div class="percent">10%</div>
+                                    <div class="phong"><img src="/images/maytinh2.jpg" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">10.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-item">
+                                    <div class="percent">25%</div>
+                                    <div class="phong"><img src="/images/popular-2.png" alt="" class="imgcover"></div>
+                                    <div class="info">
+
+                                        <div class="rate">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" style="color: black;"></i>
+                                    
+                                    </div>
+                                    
+                                    <h4 class="name ">
+                                        MÁY TÍNH HP-INTEL-3000
+                                        SALE GIẢM GIÁ 80%
+
+                                    </h4>
+                                    <div class="flex-mid flex">
+                                        <div class="price flex">
+                                        <div class="main-price">20.000.000đ</div>
+                                        
+                                        </div>
+                                        <div class="div">
+                                        <a href="" class="add-to-card">Add to card</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                      </div>
+                      
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+var swiper1 = new Swiper(".mySwiper", {
+slidesPerView: 9,
+spaceBetween: 10,
+pagination: {
+ el: ".swiper-pagination",
+ clickable: true,
+},
+breakpoints: {
+ 640: {
+   slidesPerView: 2,
+   spaceBetween: 20,
+ },
+ 768: {
+   slidesPerView: 4,
+   spaceBetween: 40,
+ },
+ 1024: {
+   slidesPerView: 5,
+   spaceBetween: 50,
+ },
+},
+});
+ </script>
+
+      <!-- Phần form -->
+         <div class="div-from relative " style="opacity: 0.8;">
+                <div class="conterner conterner-center absolute" style="background-color: pink; top: 50% ; left: 50%;  transform: translate(-50%,-50%); align-items: center;border-radius: 10px;padding: 10px;">
+                    <div class="notification-signup ">
+                        <h1>Get notified when we're launching new products</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet leo,<br> porta aliquet non mattis. Nulla ante pellentesque blandit fermentum.</p>
+                        <div class="btn">
+                            <input type="email" placeholder="Enter Your Email">
+                            <button type="submit">Notify me</button>
+                       </div>           
+                    </div>
+                </div>
+
+        </div>
+  <section class="comments-section">
+    <h2 class="comments-title"><i class="fa-solid fa-comments" style="color: #ffd700;"></i> Bình luận của khách hàng</h2>
+    <form id="comment-form" class="comment-form">
+        <input type="text" id="comment-name" placeholder="Tên của bạn" required>
+        <input type="text" id="comment-content" placeholder="Nội dung bình luận" required>
+        <button type="submit" id="comment-submit">Gửi</button>
+        <button type="button" id="comment-cancel" style="display:none;">Hủy</button>
+    </form>
+    <div id="comments-list" class="comments-list"></div>
+</section>
+<footer>
+    <div class="footer">
+        <!-- Cột 1: Thương hiệu -->
+        <div class="footer__col">
+            <div class="footer__logo">
+                <img src="/images/logopanel.jpg" alt="VANTHANGSTORE" style="width: 60px;">
+            </div>
+            <div class="footer__brand">
+                <h3>VANTHANGSTORE</h3>
+                <p>Uy tín - Chất lượng - Giá tốt</p>
+            </div>
+        </div>
+        <!-- Cột 2: Vị trí -->
+        <div class="footer__col">
+            <h4>Vị trí</h4>
+            <p>123 Đường ABC, Quận XYZ, TP. HCM</p>
+            <p>Điện thoại: 0123 456 789</p>
+     <p>Email: info@vanthangstore.com</p>
+        </div>
+        <!-- Cột 3: Kết nối -->
+        <div class="footer__col">
+            <h4>Kết nối</h4>
+            <div class="footer__social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="footer__social-link">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a> |
+                <a href="https://www.twitter.com/yourprofile" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <!-- Cột 4: Liên kết -->
+        <div class="footer__col">
+            <h4>Liên kết</h4>
+            <div class="footer__links">
+                <a href="#">Giới thiệu</a><br>
+                <a href="#">Chính sách bảo mật</a><br>
+                <a href="#">Điều khoản sử dụng</a><br>
+                <a href="#">Liên hệ</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>&copy; 2023 VANTHANGSTORE. All rights reserved.</p>
+        <p>Thiết kế bởi VANTHANG</a></p>
+    </div>
+</footer>
+
+<!-- Chatbot đơn giản -->
+<div id="chatbot-widget" style="position:fixed;bottom:30px;right:30px;z-index:9999;">
+  <div id="chatbot-header" style="background:#203A43;color:#fff;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;">
+    Chat với VANTHANGSTORE
+    <span id="chatbot-close" style="float:right;cursor:pointer;">&times;</span>
+  </div>
+  <div id="chatbot-body" style="width:320px;height:340px;background:#fff;border:1px solid #203A43;border-top:none;display:none;flex-direction:column;justify-content:space-between;border-radius:0 0 10px 10px;">
+    <div id="chatbot-messages" style="padding:12px;height:260px;overflow-y:auto;font-size:15px;"></div>
+    <form id="chatbot-form" style="display:flex;border-top:1px solid #eee;">
+      <input id="chatbot-input" type="text" placeholder="Nhập câu hỏi..." autocomplete="off" style="flex:1;padding:10px;border:none;font-size:15px;">
+      <button type="submit" style="background:#203A43;color:#fff;border:none;padding:0 18px;cursor:pointer;">Gửi</button>
+    </form>
+  </div>
+</div>
+<script>
+// Chatbot mở/đóng
+const chatbotHeader = document.getElementById('chatbot-header');
+const chatbotBody = document.getElementById('chatbot-body');
+const chatbotClose = document.getElementById('chatbot-close');
+chatbotHeader.onclick = function() {
+    chatbotBody.style.display = chatbotBody.style.display === 'flex' ? 'none' : 'flex';
+};
+chatbotClose.onclick = function(e) {
+    e.stopPropagation();
+    chatbotBody.style.display = 'none';
+};
+
+// Chatbot trả lời tự động
+const chatbotForm = document.getElementById('chatbot-form');
+const chatbotInput = document.getElementById('chatbot-input');
+const chatbotMessages = document.getElementById('chatbot-messages');
+
+function chatbotReply(msg) {
+    msg = msg.toLowerCase();
+    if (msg.includes('giờ mở cửa') || msg.includes('giờ làm việc')) {
+        return "Cửa hàng mở cửa từ 8h đến 21h mỗi ngày.";
+    }
+    if (msg.includes('địa chỉ')) {
+        return "Địa chỉ: 123 Đường ABC, Quận XYZ, TP. HCM.";
+    }
+    if (msg.includes('sản phẩm') || msg.includes('bán gì')) {
+        return "Chúng tôi bán điện thoại, laptop, đồng hồ, phụ kiện chính hãng.";
+    }
+    if (msg.includes('liên hệ')) {
+        return "Bạn có thể liên hệ qua số 0123 456 789 hoặc email info@vanthangstore.com.";
+    }
+    if (msg.includes('giá') || msg.includes('bao nhiêu')) {
+        return "Bạn vui lòng chọn sản phẩm để xem giá chi tiết trên website.";
+    }
+    if (msg.includes('cảm ơn')) {
+        return "Cảm ơn bạn đã liên hệ VANTHANGSTORE!";
+    }
+    return "Xin chào! Bạn cần hỗ trợ gì? Bạn có thể hỏi về sản phẩm, giá, địa chỉ, giờ mở cửa...";
+}
+
+chatbotForm.onsubmit = function(e) {
+    e.preventDefault();
+    const userMsg = chatbotInput.value.trim();
+    if (!userMsg) return;
+    chatbotMessages.innerHTML += `<div style="text-align:right;margin-bottom:6px;"><span style="background:#203A43;color:#fff;padding:6px 12px;border-radius:12px 12px 0 12px;display:inline-block;">${userMsg}</span></div>`;
+    chatbotInput.value = '';
+    setTimeout(() => {
+        const reply = chatbotReply(userMsg);
+        chatbotMessages.innerHTML += `<div style="text-align:left;margin-bottom:6px;"><span style="background:#eee;color:#203A43;padding:6px 12px;border-radius:12px 12px 12px 0;display:inline-block;">${reply}</span></div>`;
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }, 600);
+};
+</script>
+
+
+<script>
+const commentsKey = 'customerComments';
+let editingCommentIndex = null;
+
+function getInitials(name) {
+    return name.trim().split(' ').map(w => w[0]).join('').toUpperCase().slice(0,2);
+}
+
+function renderComments() {
+    const comments = JSON.parse(localStorage.getItem(commentsKey) || '[]');
+    const commentsList = document.getElementById('comments-list');
+    if (!comments.length) {
+        commentsList.innerHTML = '<p style="color:#ffd700;">Chưa có bình luận nào.</p>';
+        return;
+    }
+    commentsList.innerHTML = comments.map((c, i) => `
+        <div class="comment-card">
+            <div class="comment-avatar">${getInitials(c.name)}</div>
+            <div class="comment-content">
+                <div class="comment-name">${c.name}</div>
+                <div class="comment-text">${c.content}</div>
+            </div>
+            <div class="comment-actions">
+                <button onclick="editComment(${i})">Sửa</button>
+                <button onclick="deleteComment(${i})">Xóa</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Thêm/sửa bình luận
+document.getElementById('comment-form').onsubmit = function(e) {
+    e.preventDefault();
+    const name = document.getElementById('comment-name').value.trim();
+    const content = document.getElementById('comment-content').value.trim();
+    let comments = JSON.parse(localStorage.getItem(commentsKey) || '[]');
+    if (editingCommentIndex !== null) {
+        comments[editingCommentIndex] = { name, content };
+        editingCommentIndex = null;
+        document.getElementById('comment-cancel').style.display = 'none';
+    } else {
+        comments.push({ name, content });
+    }
+    localStorage.setItem(commentsKey, JSON.stringify(comments));
+    this.reset();
+    renderComments();
+};
+
+// Sửa bình luận
+window.editComment = function(index) {
+    const comments = JSON.parse(localStorage.getItem(commentsKey) || '[]');
+    const c = comments[index];
+    document.getElementById('comment-name').value = c.name;
+    document.getElementById('comment-content').value = c.content;
+    editingCommentIndex = index;
+    document.getElementById('comment-cancel').style.display = '';
+    document.getElementById('comment-name').focus();
+};
+
+// Hủy sửa
+document.getElementById('comment-cancel').onclick = function() {
+    editingCommentIndex = null;
+    document.getElementById('comment-form').reset();
+    this.style.display = 'none';
+};
+
+// Xóa bình luận
+window.deleteComment = function(index) {
+    let comments = JSON.parse(localStorage.getItem(commentsKey) || '[]');
+    if (confirm('Bạn có chắc muốn xóa bình luận này?')) {
+        comments.splice(index, 1);
+        localStorage.setItem(commentsKey, JSON.stringify(comments));
+        renderComments();
+    }
+};
+
+// Hiển thị bình luận khi tải trang
+renderComments();
+</script>  
+</body>
+</html>
