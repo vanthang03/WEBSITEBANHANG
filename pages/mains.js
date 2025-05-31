@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let users = JSON.parse(localStorage.getItem('users') || '[]');
         const user = users.find(u => u.username === username && u.password === password);
         if (!user) {
-            document.getElementById('login-msg').textContent = 'Sai tên đăng nhập hoặc mật khẩu!';
+            document.getElementById('login-msg').textContent = 'Sai tên đăng nhập hoặc  mật khẩu!!';
             return;
         }
         localStorage.setItem('currentUser', JSON.stringify(user));
